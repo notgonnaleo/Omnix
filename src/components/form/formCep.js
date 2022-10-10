@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import cepApi from "../../services/cepApi";
+import InputMask from "react-input-mask";
 import Swal from 'sweetalert2';
 
 function Cep(){
 
     const [value, setValue] = useState('')
+    const [Endereco, setEndereco] = useState({}); 
 
     async function getData(){
         if(value === '' || value == isNaN(value) ){
@@ -18,7 +21,7 @@ function Cep(){
         try
         {
             const response = await cepApi.get(value+'/json');
-            console.log(response.data)
+            setEndereco(response.data);
         }
         catch
         {
@@ -33,18 +36,25 @@ function Cep(){
     return(
         <div>
             <h1>Formulario Cep</h1>
-            <input 
+            <InputMask 
             id="inputCep" 
-            type="text" 
+            type="text"
+            mask="99999-999"
             value={value} 
             onChange={(e) => setValue(e.target.value)}
             placeholder="Insira seu CEP">
-            </input>
+            </InputMask>
 
             <button onClick={getData}>
                 Pesquisar
             </button>
-
+        
+            <div>
+                <input value={Endereco.bairro}></input>
+                <input value={Endereco.localidade}></input>
+                <input value={Endereco.logradouro}></input>
+                <input value={Endereco.uf}></input>
+            </div>
 
         </div>
     )
