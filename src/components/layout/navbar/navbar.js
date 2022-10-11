@@ -5,7 +5,7 @@ import { FaHome } from "react-icons/fa";
 
 
 export default function Navbar(){
-    return(
+    return (
           <nav>
             <div className="logo">
               <p className="text-logo">Logo</p>

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Default Colors */
+    --main-color: #27e394;
+    --secondary-color: #20c155;
+    --white-color: #fff;
+    --dim-gray: #fcfcfc;
+    --dark-gray: #1c1c1c;
+    --dark-black: #010101;
+
+    /* Other Colors  */
+    --pinkish-red: #ff004c;
+    --blue: #0800ff;
+    --orange: #ff9100;
+    --light-blue: #006eff;
+    --purple: #5d00ff;
+
+    /* Font */
+    --text-font: 'Poppins', sans-serif;
+
+    /* Font sizes  */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+
+button{
+    font-family: var(--text-font);
+    text-decoration: none;
+}
+
+@media (max-width: 1080px){
+    .card-product{
+        -webkit-box-shadow: 0px 0px 40px -20px var(--purple);
+        -moz-box-shadow: 0px 0px 40px -20px var(--purple);
+        box-shadow: 0px 0px 40px -20px var(--purple);
+        border-radius: 0px !important;
+        margin: 0px !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: var(--white-color);
+    }
+
+    .btnView {
+        cursor: pointer;
+        display: inline-block;
+        width: 8em; 
+        z-index: 0 !important;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        transition: color .5s;
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--purple);
+    }
+
+    .btn-group{
+        margin-bottom: 100px;
+    }
+}
+
+.card-product{
+    -webkit-box-shadow: 0px 0px 40px -20px var(--purple);
+    -moz-box-shadow: 0px 0px 40px -20px var(--purple);
+    box-shadow: 0px 0px 40px -20px var(--purple);
+    border-radius: 15px;
+    margin: 25px;
+    width: 40%;
+    height: 20%;
+    background-color: var(--white-color);
+}
+
+.titleCep{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-item{
+    padding: 50px;
+    margin: 0px, auto;
+    align-items: center;
+    text-align: center;
+}
+
+.field {
+    outline: none;
+    font-family: var(--text-font);
+    width: 80%;
+    border: none;
+    height: 50px;
+    margin: 5px;
+    position: relative;
+    padding: 0px 16px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent;
+    color: var(--purple);
+    box-shadow: 0px 4px 20px 0px transparent;
+    transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
+    -webkit-appearance: none;
+}
+
+.btnView {
+    cursor: pointer;
+    display: inline-block;
+    width: 8em;
+    z-index: 1;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: color .5s;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--purple);
+}
+
+.btnView:before {
+    content: "";
+    position: absolute;
+    background: var(--purple);
+    height: 150px;
+    width: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.btnView:hover {
+    color: #fff;
+}
+
+.btnView:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.btnView:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.btnView:active:before {
+    background: var(--purple);
+    transition: background 0s;
+}
+
+.field:hover {
+    border: none;
+    background-color: rgba(154, 103, 255, 0.079);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
