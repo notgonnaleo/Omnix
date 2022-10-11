@@ -1,0 +1,105 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Default Colors */
+    --main-color: #27e394;
+    --secondary-color: #20c155;
+    --white-color: #fff;
+    --dim-gray: #e0e0e0;
+    --dark-gray: #1c1c1c;
+    --dark-black: #010101;
+
+    /* Other Colors  */
+    --pinkish-red: #ff004c;
+    --blue: #0800ff;
+    --orange: #ff9100;
+    --light-blue: #006eff;
+    --purple: #5d00ff;
+
+    /* Font */
+    --text-font: 'Poppins', sans-serif;
+
+    /* Font sizes  */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+h1,h2,h3,h4,h5,p,a,li,ul{
+    font-family: var(--text-font);
+    text-decoration: none;
+}
+
+.footer-link{
+    color: var(--purple);
+}
+
+footer li{
+    margin: 10px;
+    float: left;
+    list-style: none;
+}
+
+.footer-title{
+    color: var(--purple);
+}
+
+.footer-subtitle{
+    color: var(--purple);
+}
+
+.footer-content{
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-menu{
+    align-items: center;
+    margin: 0px auto;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+@media (max-width: 800px){
+    .footer-content{
+        margin-bottom: 25px;
+        text-align: center;
+        width: 100%;
+        left: -35px;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        left: -35px;
+    }
+}
+
+footer{
+    z-index: 5px;
+    padding-top: 15px;
+    background-color: var(--white-color);
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+}
+
+p,a{
+    font-weight: var(--font-light);
+}
+
+h1{
+    font-weight: var(--font-semi-bold);
+}
